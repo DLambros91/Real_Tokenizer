@@ -1,0 +1,1651 @@
+|------------|
+|TEST CASE 1 |
+|------------|
+Original string:
+ #<include> stdio.h
+
+int main()
+{
+	int a, b, c;
+	a = 3;
+	'b	=  a;'
+
+	c += b;
+}
+
+"#<include> stdio.h" is a Preprocessor Directive
+"int" is a keyword
+"main" is a word
+"(" is a left parentheses
+")" is a right parentheses
+"{" is a left curly brace
+"int" is a keyword
+"a" is a word
+"," is a Comma Operator
+"b" is a word
+"," is a Comma Operator
+"c" is a word
+";" is a Statement Terminator
+"a" is a word
+"=" is a equals sign
+"3" is a decimal number
+"b	=  a;" is a user defined token
+"c" is a word
+"+=" is a plusequals
+"b" is a word
+";" is a Statement Terminator
+"}" is a right curly brace
+
+Original string unaltered after tokenizing:
+ #<include> stdio.h
+
+int main()
+{
+	int a, b, c;
+	a = 3;
+	'b	=  a;'
+
+	c += b;
+}
+
+
+|------------|
+|TEST CASE 2 |
+|------------|
+Original string:
+ array[xyz ] += pi 3.14159e-10 
+
+"array" is a word
+"[" is a left brace
+"xyz" is a word
+"]" is a right brace
+"+=" is a plusequals
+"pi" is a word
+"3.14159e-10" is a scientific float
+
+Original string unaltered after tokenizing:
+ array[xyz ] += pi 3.14159e-10 
+Execution Time: 0.000152s
+
+|------------|
+|TEST CASE 3 |
+|------------|
+Original string:
+ today is a beautiful day
+
+"today" is a word
+"is" is a word
+"a" is a word
+"beautiful" is a word
+"day" is a word
+
+Original string unaltered after tokenizing:
+ today is a beautiful day
+Execution Time: 0.000230s
+
+|------------|
+|TEST CASE 4 |
+|------------|
+Original string:
+ 0x4356abdc 0777 [] 
+
+"0x4356abdc" is a Hexadecimal Number
+"0777" is a Octal Number
+"[" is a left brace
+"]" is a right brace
+
+Original string unaltered after tokenizing:
+ 0x4356abdc 0777 [] 
+Execution Time: 0.000186s
+
+|--------------------------------------------------------------------------|
+|TEST CASE 5 - READING ITSELF... very long (Reading itself with " removed)|
+|--------------------------------------------------------------------------|
+"#include <stdio.h>" is a Preprocessor Directive
+"#include <string.h>" is a Preprocessor Directive
+"#include <ctype.h>" is a Preprocessor Directive
+"#include <assert.h>" is a Preprocessor Directive
+"#include <stdlib.h>" is a Preprocessor Directive
+"#include <time.h>" is a Preprocessor Directive
+"struct" is a keyword
+"TokenizerT" is a word
+"_" is a UnderScore
+"{" is a left curly brace
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"str" is a word
+";" is a Statement Terminator
+"int" is a keyword
+"curChar" is a word
+";" is a Statement Terminator
+"int" is a keyword
+"manyTokens" is a word
+";" is a Statement Terminator
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"*" is a Binary Operator: multiply
+"tokens" is a word
+";" is a Statement Terminator
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"*" is a Binary Operator: multiply
+"tokenDesc" is a word
+";" is a Statement Terminator
+"int" is a keyword
+"strSize" is a word
+";" is a Statement Terminator
+"}" is a right curly brace
+";" is a Statement Terminator
+"typedef" is a keyword
+"struct" is a keyword
+"TokenizerT" is a word
+"_" is a UnderScore
+"TokenizerT" is a word
+";" is a Statement Terminator
+"TokenizerT" is a word
+"*" is a Binary Operator: multiply
+"TKCreate" is a word
+"(" is a left parentheses
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"ts" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"if" is a keyword
+"(" is a left parentheses
+"ts" is a word
+"!=" is a Binary Operator: Not Equals
+"NULL" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"struct" is a keyword
+"TokenizerT" is a word
+"_" is a UnderScore
+"*" is a Binary Operator: multiply
+"tk" is a word
+"=" is a equals sign
+"calloc" is a word
+"(" is a left parentheses
+"1" is a decimal number
+"sizeof" is a keyword
+"(" is a left parentheses
+"TokenizerT" is a word
+")" is a right parentheses
+")" is a right parentheses
+";" is a Statement Terminator
+"assert" is a word
+"(" is a left parentheses
+"tk" is a word
+"!=" is a Binary Operator: Not Equals
+"NULL" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"manyTokens" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"=" is a equals sign
+"1" is a decimal number
+"while" is a keyword
+"(" is a left parentheses
+"(" is a left parentheses
+"char" is a keyword
+")" is a right parentheses
+"ts" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"]" is a right brace
+"!=" is a Binary Operator: Not Equals
+"\0" is a user defined token
+")" is a right parentheses
+"{" is a left curly brace
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"++" is a increment
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"++" is a increment
+";" is a Statement Terminator
+"}" is a right curly brace
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"=" is a equals sign
+"calloc" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"," is a Comma Operator
+"sizeof" is a keyword
+"(" is a left parentheses
+"char" is a keyword
+"*" is a Binary Operator: multiply
+")" is a right parentheses
+")" is a right parentheses
+";" is a Statement Terminator
+"int" is a keyword
+"i" is a word
+";" is a Statement Terminator
+"for" is a keyword
+"(" is a left parentheses
+"i" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"i" is a word
+"<" is a Binary Operator: Less Than
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+";" is a Statement Terminator
+"i" is a word
+"++" is a increment
+")" is a right parentheses
+"{" is a left curly brace
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+"=" is a equals sign
+"ts" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+";" is a Statement Terminator
+"}" is a right curly brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"tokens" is a word
+"=" is a equals sign
+"calloc" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"," is a Comma Operator
+"sizeof" is a keyword
+"(" is a left parentheses
+"char" is a keyword
+"*" is a Binary Operator: multiply
+")" is a right parentheses
+")" is a right parentheses
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"tokenDesc" is a word
+"=" is a equals sign
+"calloc" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"," is a Comma Operator
+"sizeof" is a keyword
+"(" is a left parentheses
+"char" is a keyword
+"*" is a Binary Operator: multiply
+")" is a right parentheses
+")" is a right parentheses
+";" is a Statement Terminator
+"return" is a keyword
+"tk" is a word
+";" is a Statement Terminator
+"}" is a right curly brace
+"else" is a keyword
+"{" is a left curly brace
+"return" is a keyword
+"NULL" is a word
+";" is a Statement Terminator
+"}" is a right curly brace
+"}" is a right curly brace
+"void" is a keyword
+"TKDestroy" is a word
+"(" is a left parentheses
+"TokenizerT" is a word
+"*" is a Binary Operator: multiply
+"tk" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"int" is a keyword
+"i" is a word
+";" is a Statement Terminator
+"assert" is a word
+"(" is a left parentheses
+"tk" is a word
+"!=" is a Binary Operator: Not Equals
+"NULL" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"for" is a keyword
+"(" is a left parentheses
+"i" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"manyTokens" is a word
+"--" is a decrement
+">" is a Binary Operator: Greater Than
+";" is a Statement Terminator
+"i" is a word
+"++" is a increment
+")" is a right parentheses
+"{" is a left curly brace
+"if" is a keyword
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"tokens" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+"!=" is a Binary Operator: Not Equals
+"NULL" is a word
+"&&" is a Logical And
+"tk" is a word
+"->" is a structure pointer
+"tokenDesc" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+"!=" is a Binary Operator: Not Equals
+"NULL" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"free" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"tokens" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+")" is a right parentheses
+";" is a Statement Terminator
+"}" is a right curly brace
+"}" is a right curly brace
+"free" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"free" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"tokens" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"free" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"tokenDesc" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"free" is a word
+"(" is a left parentheses
+"tk" is a word
+")" is a right parentheses
+";" is a Statement Terminator
+"}" is a right curly brace
+"int" is a keyword
+"isKeyword" is a word
+"(" is a left parentheses
+"const" is a keyword
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"word" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"int" is a keyword
+"isKey" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"auto" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"break" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"case" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"char" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"const" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"continue" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"default" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"do" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"double" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"else" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"enum" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"extern" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"float" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"for" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"goto" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"if" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"int" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"long" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"register" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"return" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"short" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"signed" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"sizeof" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"static" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"struct" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"switch" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"typedef" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"union" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"unsigned" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"void" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"volatile" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"else" is a keyword
+"if" is a keyword
+"(" is a left parentheses
+"strcmp" is a word
+"(" is a left parentheses
+"while" is a keyword
+"," is a Comma Operator
+"word" is a word
+")" is a right parentheses
+"==" is a Relational Operator: equals to
+")" is a right parentheses
+"{" is a left curly brace
+"isKey" is a word
+"=" is a equals sign
+"1" is a decimal number
+"}" is a right curly brace
+"return" is a keyword
+"isKey" is a word
+";" is a Statement Terminator
+"}" is a right curly brace
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"TKGetNextToken" is a word
+"(" is a left parentheses
+"TokenizerT" is a word
+"*" is a Binary Operator: multiply
+"tk" is a word
+")" is a right parentheses
+"{" is a left curly brace
+"if" is a keyword
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"==" is a Relational Operator: equals to
+"\0" is a user defined token
+")" is a right parentheses
+"{" is a left curly brace
+"return" is a keyword
+"\0" is a user defined token
+";" is a Statement Terminator
+"}" is a right curly brace
+"char" is a keyword
+"*" is a Binary Operator: multiply
+"arr" is a word
+"=" is a equals sign
+"calloc" is a word
+"(" is a left parentheses
+"tk" is a word
+"->" is a structure pointer
+"strSize" is a word
+"-" is a minus
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"," is a Comma Operator
+"sizeof" is a keyword
+"(" is a left parentheses
+"char" is a keyword
+")" is a right parentheses
+")" is a right parentheses
+";" is a Statement Terminator
+"int" is a keyword
+"i" is a word
+"=" is a equals sign
+";" is a Statement Terminator
+"while" is a keyword
+"(" is a left parentheses
+"(" is a left parentheses
+"char" is a keyword
+")" is a right parentheses
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"]" is a right brace
+"!=" is a Binary Operator: Not Equals
+"\0" is a user defined token
+")" is a right parentheses
+"{" is a left curly brace
+"if" is a keyword
+"(" is a left parentheses
+"(" is a left parentheses
+"char" is a keyword
+")" is a right parentheses
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"]" is a right brace
+"==" is a Relational Operator: equals to
+"\" is a user defined token
+")
+	{
+		tk->curChar++;
+		while((char)tk->str[tk->curChar] != " is a user defined token
+"\" is a Unknown Operator
+"" is a user defined token
+")" is a right parentheses
+"{" is a left curly brace
+"if" is a keyword
+"(" is a left parentheses
+"(" is a left parentheses
+"char" is a keyword
+")" is a right parentheses
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"]" is a right brace
+"==" is a Relational Operator: equals to
+"\0" is a user defined token
+")" is a right parentheses
+"{" is a left curly brace
+"break" is a keyword
+";" is a Statement Terminator
+"}" is a right curly brace
+"arr" is a word
+"[" is a left brace
+"i" is a word
+"]" is a right brace
+"=" is a equals sign
+"tk" is a word
+"->" is a structure pointer
+"str" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"]" is a right brace
+";" is a Statement Terminator
+"i" is a word
+"++" is a increment
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"++" is a increment
+";" is a Statement Terminator
+"}" is a right curly brace
+"tk" is a word
+"->" is a structure pointer
+"curChar" is a word
+"++" is a increment
+";" is a Statement Terminator
+"tk" is a word
+"->" is a structure pointer
+"tokenDesc" is a word
+"[" is a left brace
+"tk" is a word
+"->" is a structure pointer
+"manyTokens" is a word
+"]" is a right brace
+"=" is a equals sign
+"user" is a word
+Execution Time: 0.004473s
+
+|-------------|
+| Test Case 6 |
+|-------------|
+Original string:
+ x+3*8 where x = 6
+
+"x" is a word
+"+" is a plus
+"3" is a decimal number
+"8" is a decimal number
+"where" is a word
+"x" is a word
+"=" is a equals sign
+"6" is a decimal number
+
+Original string unaltered after tokenizing:
+ x+3*8 where x = 6
+Execution Time: 0.000250s
+
+|-------------------------------------------|
+| Test Case 7 - CNN Article on gay marriage |
+|-------------------------------------------|
+Original string:
+ President Barack Obama insisted Tuesday that his former top political aide David Axelrod's got it wrong when it comes to Obama's position on same-sex marriage and whether it changed over time.
+
+Axelrod wrote in his book published earlier Tuesday that Obama lied about his position on the issue for the sake of political expediency, writing that Obama had actually supported gay marriage for years. In coming out in support of same-sex couples' right to marry in May 2012, Obama had cited  the evolution that I went through. 
+
+ I think David is mixing up my personal feelings with my position on the issue,  Obama said in an interview with BuzzFeed News.  I always felt that same-sex couples should be able to enjoy the same rights, legally, as anybody else, and so it was frustrating to me not to, I think, be able to square that with what were a whole bunch of religious sensitivities out there. 
+
+Obama had previously supported civil unions for gay couples and explained Tuesday that he used to think that was  a sufficient way of squaring the circle.  But eventually, he told Buzzfeed on Tuesday, Obama changed his political position because of  the pain and the sense of stigma that was being placed on same-sex couples who are friends  of his.
+
+But in his book,  Believer: My Forty Years in Poltics,  Axelrod suggests politics played a bigger role in Obama's public position on the issue throughout his first presidential campaign and into the first term of his presidency.
+
+ Gay marriage was a particularly nagging issue. For as long as we had been working together, Obama had felt a tug between his personal views and the politics of gay marriage,  Axelrod writes.  Opposition to gay marriage was particularly strong in the black church, and as he ran for higher office, he grudgingly accepted the counsel of more pragmatic folks like me, and modified his position to support civil unions rather than marriage, which he would term a 'sacred union.' 
+
+And Axelrod recalled that Obama said he just didn't  feel my marriage is somehow threatened by the gay couple next door. 
+
+It was just one example of the  recurring tension between Obama the idealist and Obama the politician,  Axelrod wrote.
+
+ Obama never felt comfortable with his compromise and, no doubt, compromised position,  Axelrod writes.  He routinely stumbled over the question when it came up in debates or interviews. 'I'm just not very good at bulls---ting,' he said with a sigh after one such awkward exchange. 
+
+Axelrod also cited a questionnaire from 1996 previously cited in news reports as evidence of Obama's longtime support for gay marriage.
+
+While running for his first term in the Illinois State Senate, Obama signed a questionnaire in which he answered that he  favored legalizing same-sex marriages, and would fight efforts to prohibit such marriages.  The questionnaire came to light in 2009, days before Obama's inauguration.
+
+ I had no doubt that this was his heartfelt belief,  Axelrod said of the questionnaire.  He also knew his view was way out in front of the public's. 
+
+But Obama insisted Tuesday that  the notion that somehow I was always in favor of marriage per se [for gay couples] isn't quite accurate. 
+
+ The old questionnaire,  Obama said in the interview,  is an example of struggling with what was a real issue at the time, which is, how do you make sure that people's rights are enjoyed and these religious sensitivities were taken into account? 
+
+Predicting Supreme Court victory for gay marriage
+
+What is clear now is that Obama now wholly supports same-sex marriage, and he's predicting the Supreme Court will legalize gay marriage -- now allowed in 37 states -- once and for all this year.
+
+Obama's comments come after the nation's high court refused to grant temporary delays to states that have had their laws restricting marriage to one man and one woman invalidated, sending a signal that justices are leaning in favor of allowing gay marriage in a ruling expected this June.
+
+ My sense is that the Supreme Court is about to make a shift, one that I welcome, which is to recognize that -- having hit a critical mass of states that have recognized same-sex marriage -- it doesn't make sense for us to now have this patchwork system,  Obama said in the BuzzFeed News interview.
+
+ It's time to recognize that under the equal protection clause of the United States [Constitution], same-sex couples should have the same rights as anybody else,  he said.
+
+"President" is a word
+"Barack" is a word
+"Obama" is a word
+"insisted" is a word
+"Tuesday" is a word
+"that" is a word
+"his" is a word
+"former" is a word
+"top" is a word
+"political" is a word
+"aide" is a word
+"David" is a word
+"Axelrod" is a word
+"s got it wrong when it comes to Obama" is a user defined token
+"s" is a word
+"position" is a word
+"on" is a word
+"same" is a word
+"-" is a minus
+"sex" is a word
+"marriage" is a word
+"and" is a word
+"whether" is a word
+"it" is a word
+"changed" is a word
+"over" is a word
+"time" is a word
+"." is a Structure Member
+"Axelrod" is a word
+"wrote" is a word
+"in" is a word
+"his" is a word
+"book" is a word
+"published" is a word
+"earlier" is a word
+"Tuesday" is a word
+"that" is a word
+"Obama" is a word
+"lied" is a word
+"about" is a word
+"his" is a word
+"position" is a word
+"on" is a word
+"the" is a word
+"issue" is a word
+"for" is a keyword
+"the" is a word
+"sake" is a word
+"of" is a word
+"political" is a word
+"expediency" is a word
+"," is a Comma Operator
+"writing" is a word
+"that" is a word
+"Obama" is a word
+"had" is a word
+"actually" is a word
+"supported" is a word
+"gay" is a word
+"marriage" is a word
+"for" is a keyword
+"years" is a word
+"." is a Structure Member
+"In" is a word
+"coming" is a word
+"out" is a word
+"in" is a word
+"support" is a word
+"of" is a word
+"same" is a word
+"-" is a minus
+"sex" is a word
+"couples" is a word
+" right to marry in May 2012, Obama had cited  the evolution that I went through. 
+
+ I think David is mixing up my personal feelings with my position on the issue,  Obama said in an interview with BuzzFeed News.  I always felt that same-sex couples should be able to enjoy the same rights, legally, as anybody else, and so it was frustrating to me not to, I think, be able to square that with what were a whole bunch of religious sensitivities out there. 
+
+Obama had previously supported civil unions for gay couples and explained Tuesday that he used to think that was  a sufficient way of squaring the circle.  But eventually, he told Buzzfeed on Tuesday, Obama changed his political position because of  the pain and the sense of stigma that was being placed on same-sex couples who are friends  of his.
+
+But in his book,  Believer: My Forty Years in Poltics,  Axelrod suggests politics played a bigger role in Obama" is a user defined token
+"s" is a word
+"public" is a word
+"position" is a word
+"on" is a word
+"the" is a word
+"issue" is a word
+"throughout" is a word
+"his" is a word
+"first" is a word
+"presidential" is a word
+"campaign" is a word
+"and" is a word
+"into" is a word
+"the" is a word
+"first" is a word
+"term" is a word
+"of" is a word
+"his" is a word
+"presidency" is a word
+"." is a Structure Member
+"Gay" is a word
+"marriage" is a word
+"was" is a word
+"a" is a word
+"particularly" is a word
+"nagging" is a word
+"issue" is a word
+"." is a Structure Member
+"For" is a word
+"as" is a word
+"long" is a keyword
+"as" is a word
+"we" is a word
+"had" is a word
+"been" is a word
+"working" is a word
+"together" is a word
+"," is a Comma Operator
+"Obama" is a word
+"had" is a word
+"felt" is a word
+"a" is a word
+"tug" is a word
+"between" is a word
+"his" is a word
+"personal" is a word
+"views" is a word
+"and" is a word
+"the" is a word
+"politics" is a word
+"of" is a word
+"gay" is a word
+"marriage" is a word
+"," is a Comma Operator
+"Axelrod" is a word
+"writes" is a word
+"." is a Structure Member
+"Opposition" is a word
+"to" is a word
+"gay" is a word
+"marriage" is a word
+"was" is a word
+"particularly" is a word
+"strong" is a word
+"in" is a word
+"the" is a word
+"black" is a word
+"church" is a word
+"," is a Comma Operator
+"and" is a word
+"as" is a word
+"he" is a word
+"ran" is a word
+"for" is a keyword
+"higher" is a word
+"office" is a word
+"," is a Comma Operator
+"he" is a word
+"grudgingly" is a word
+"accepted" is a word
+"the" is a word
+"counsel" is a word
+"of" is a word
+"more" is a word
+"pragmatic" is a word
+"folks" is a word
+"like" is a word
+"me" is a word
+"," is a Comma Operator
+"and" is a word
+"modified" is a word
+"his" is a word
+"position" is a word
+"to" is a word
+"support" is a word
+"civil" is a word
+"unions" is a word
+"rather" is a word
+"than" is a word
+"marriage" is a word
+"," is a Comma Operator
+"which" is a word
+"he" is a word
+"would" is a word
+"term" is a word
+"a" is a word
+"sacred union." is a user defined token
+"And" is a word
+"Axelrod" is a word
+"recalled" is a word
+"that" is a word
+"Obama" is a word
+"said" is a word
+"he" is a word
+"just" is a word
+"didn" is a word
+"t  feel my marriage is somehow threatened by the gay couple next door. 
+
+It was just one example of the  recurring tension between Obama the idealist and Obama the politician,  Axelrod wrote.
+
+ Obama never felt comfortable with his compromise and, no doubt, compromised position,  Axelrod writes.  He routinely stumbled over the question when it came up in debates or interviews. " is a user defined token
+"I" is a word
+"m just not very good at bulls---ting," is a user defined token
+"he" is a word
+"said" is a word
+"with" is a word
+"a" is a word
+"sigh" is a word
+"after" is a word
+"one" is a word
+"such" is a word
+"awkward" is a word
+"exchange" is a word
+"." is a Structure Member
+"Axelrod" is a word
+"also" is a word
+"cited" is a word
+"a" is a word
+"questionnaire" is a word
+"from" is a word
+"1996" is a decimal number
+"previously" is a word
+"cited" is a word
+"in" is a word
+"news" is a word
+"reports" is a word
+"as" is a word
+"evidence" is a word
+"of" is a word
+"Obama" is a word
+"s longtime support for gay marriage.
+
+While running for his first term in the Illinois State Senate, Obama signed a questionnaire in which he answered that he  favored legalizing same-sex marriages, and would fight efforts to prohibit such marriages.  The questionnaire came to light in 2009, days before Obama" is a user defined token
+"s" is a word
+"inauguration" is a word
+"." is a Structure Member
+"I" is a word
+"had" is a word
+"no" is a word
+"doubt" is a word
+"that" is a word
+"this" is a word
+"was" is a word
+"his" is a word
+"heartfelt" is a word
+"belief" is a word
+"," is a Comma Operator
+"Axelrod" is a word
+"said" is a word
+"of" is a word
+"the" is a word
+"questionnaire" is a word
+"." is a Structure Member
+"He" is a word
+"also" is a word
+"knew" is a word
+"his" is a word
+"view" is a word
+"was" is a word
+"way" is a word
+"out" is a word
+"in" is a word
+"front" is a word
+"of" is a word
+"the" is a word
+"public" is a word
+"s. 
+
+But Obama insisted Tuesday that  the notion that somehow I was always in favor of marriage per se [for gay couples] isn" is a user defined token
+"t" is a word
+"quite" is a word
+"accurate" is a word
+"." is a Structure Member
+"The" is a word
+"old" is a word
+"questionnaire" is a word
+"," is a Comma Operator
+"Obama" is a word
+"said" is a word
+"in" is a word
+"the" is a word
+"interview" is a word
+"," is a Comma Operator
+"is" is a word
+"an" is a word
+"example" is a word
+"of" is a word
+"struggling" is a word
+"with" is a word
+"what" is a word
+"was" is a word
+"a" is a word
+"real" is a word
+"issue" is a word
+"at" is a word
+"the" is a word
+"time" is a word
+"," is a Comma Operator
+"which" is a word
+"is" is a word
+"," is a Comma Operator
+"how" is a word
+"do" is a keyword
+"you" is a word
+"make" is a word
+"sure" is a word
+"that" is a word
+"people" is a word
+"s rights are enjoyed and these religious sensitivities were taken into account? 
+
+Predicting Supreme Court victory for gay marriage
+
+What is clear now is that Obama now wholly supports same-sex marriage, and he" is a user defined token
+"s" is a word
+"predicting" is a word
+"the" is a word
+"Supreme" is a word
+"Court" is a word
+"will" is a word
+"legalize" is a word
+"gay" is a word
+"marriage" is a word
+"--" is a decrement
+"now" is a word
+"allowed" is a word
+"in" is a word
+"37" is a decimal number
+"states" is a word
+"--" is a decrement
+"once" is a word
+"and" is a word
+"for" is a keyword
+"all" is a word
+"this" is a word
+"year" is a word
+"." is a Structure Member
+"Obama" is a word
+"s comments come after the nation" is a user defined token
+"s" is a word
+"high" is a word
+"court" is a word
+"refused" is a word
+"to" is a word
+"grant" is a word
+"temporary" is a word
+"delays" is a word
+"to" is a word
+"states" is a word
+"that" is a word
+"have" is a word
+"had" is a word
+"their" is a word
+"laws" is a word
+"restricting" is a word
+"marriage" is a word
+"to" is a word
+"one" is a word
+"man" is a word
+"and" is a word
+"one" is a word
+"woman" is a word
+"invalidated" is a word
+"," is a Comma Operator
+"sending" is a word
+"a" is a word
+"signal" is a word
+"that" is a word
+"justices" is a word
+"are" is a word
+"leaning" is a word
+"in" is a word
+"favor" is a word
+"of" is a word
+"allowing" is a word
+"gay" is a word
+"marriage" is a word
+"in" is a word
+"a" is a word
+"ruling" is a word
+"expected" is a word
+"this" is a word
+"June" is a word
+"." is a Structure Member
+"My" is a word
+"sense" is a word
+"is" is a word
+"that" is a word
+"the" is a word
+"Supreme" is a word
+"Court" is a word
+"is" is a word
+"about" is a word
+"to" is a word
+"make" is a word
+"a" is a word
+"shift" is a word
+"," is a Comma Operator
+"one" is a word
+"that" is a word
+"I" is a word
+"welcome" is a word
+"," is a Comma Operator
+"which" is a word
+"is" is a word
+"to" is a word
+"recognize" is a word
+"that" is a word
+"--" is a decrement
+"having" is a word
+"hit" is a word
+"a" is a word
+"critical" is a word
+"mass" is a word
+"of" is a word
+"states" is a word
+"that" is a word
+"have" is a word
+"recognized" is a word
+"same" is a word
+"-" is a minus
+"sex" is a word
+"marriage" is a word
+"--" is a decrement
+"it" is a word
+"doesn" is a word
+"t make sense for us to now have this patchwork system,  Obama said in the BuzzFeed News interview.
+
+ It" is a user defined token
+"s" is a word
+"time" is a word
+"to" is a word
+"recognize" is a word
+"that" is a word
+"under" is a word
+"the" is a word
+"equal" is a word
+"protection" is a word
+"clause" is a word
+"of" is a word
+"the" is a word
+"United" is a word
+"States" is a word
+"[" is a left brace
+"Constitution" is a word
+"]" is a right brace
+"," is a Comma Operator
+"same" is a word
+"-" is a minus
+"sex" is a word
+"couples" is a word
+"should" is a word
+"have" is a word
+"the" is a word
+"same" is a word
+"rights" is a word
+"as" is a word
+"anybody" is a word
+"else" is a keyword
+"," is a Comma Operator
+"he" is a word
+"said" is a word
+"." is a Structure Member
+
+Original string unaltered after tokenizing:
+ President Barack Obama insisted Tuesday that his former top political aide David Axelrod's got it wrong when it comes to Obama's position on same-sex marriage and whether it changed over time.
+
+Axelrod wrote in his book published earlier Tuesday that Obama lied about his position on the issue for the sake of political expediency, writing that Obama had actually supported gay marriage for years. In coming out in support of same-sex couples' right to marry in May 2012, Obama had cited  the evolution that I went through. 
+
+ I think David is mixing up my personal feelings with my position on the issue,  Obama said in an interview with BuzzFeed News.  I always felt that same-sex couples should be able to enjoy the same rights, legally, as anybody else, and so it was frustrating to me not to, I think, be able to square that with what were a whole bunch of religious sensitivities out there. 
+
+Obama had previously supported civil unions for gay couples and explained Tuesday that he used to think that was  a sufficient way of squaring the circle.  But eventually, he told Buzzfeed on Tuesday, Obama changed his political position because of  the pain and the sense of stigma that was being placed on same-sex couples who are friends  of his.
+
+But in his book,  Believer: My Forty Years in Poltics,  Axelrod suggests politics played a bigger role in Obama's public position on the issue throughout his first presidential campaign and into the first term of his presidency.
+
+ Gay marriage was a particularly nagging issue. For as long as we had been working together, Obama had felt a tug between his personal views and the politics of gay marriage,  Axelrod writes.  Opposition to gay marriage was particularly strong in the black church, and as he ran for higher office, he grudgingly accepted the counsel of more pragmatic folks like me, and modified his position to support civil unions rather than marriage, which he would term a 'sacred union.' 
+
+And Axelrod recalled that Obama said he just didn't  feel my marriage is somehow threatened by the gay couple next door. 
+
+It was just one example of the  recurring tension between Obama the idealist and Obama the politician,  Axelrod wrote.
+
+ Obama never felt comfortable with his compromise and, no doubt, compromised position,  Axelrod writes.  He routinely stumbled over the question when it came up in debates or interviews. 'I'm just not very good at bulls---ting,' he said with a sigh after one such awkward exchange. 
+
+Axelrod also cited a questionnaire from 1996 previously cited in news reports as evidence of Obama's longtime support for gay marriage.
+
+While running for his first term in the Illinois State Senate, Obama signed a questionnaire in which he answered that he  favored legalizing same-sex marriages, and would fight efforts to prohibit such marriages.  The questionnaire came to light in 2009, days before Obama's inauguration.
+
+ I had no doubt that this was his heartfelt belief,  Axelrod said of the questionnaire.  He also knew his view was way out in front of the public's. 
+
+But Obama insisted Tuesday that  the notion that somehow I was always in favor of marriage per se [for gay couples] isn't quite accurate. 
+
+ The old questionnaire,  Obama said in the interview,  is an example of struggling with what was a real issue at the time, which is, how do you make sure that people's rights are enjoyed and these religious sensitivities were taken into account? 
+
+Predicting Supreme Court victory for gay marriage
+
+What is clear now is that Obama now wholly supports same-sex marriage, and he's predicting the Supreme Court will legalize gay marriage -- now allowed in 37 states -- once and for all this year.
+
+Obama's comments come after the nation's high court refused to grant temporary delays to states that have had their laws restricting marriage to one man and one woman invalidated, sending a signal that justices are leaning in favor of allowing gay marriage in a ruling expected this June.
+
+ My sense is that the Supreme Court is about to make a shift, one that I welcome, which is to recognize that -- having hit a critical mass of states that have recognized same-sex marriage -- it doesn't make sense for us to now have this patchwork system,  Obama said in the BuzzFeed News interview.
+
+ It's time to recognize that under the equal protection clause of the United States [Constitution], same-sex couples should have the same rights as anybody else,  he said.
+Execution Time: 0.002743s
